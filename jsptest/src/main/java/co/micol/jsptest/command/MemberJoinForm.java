@@ -5,12 +5,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.micol.jsptest.common.Command;
 
-public class ACommand implements Command {
+public class MemberJoinForm implements Command {
 
 	@Override
 	public String run(HttpServletRequest request, HttpServletResponse response) {
-		// a.do로 들어오면 처리하는 곳
-		 return "member/a";
-//		return "b.do";
+		return "member/memberJoinForm";
 	}
 }
