@@ -9,7 +9,10 @@
 <body>
 	<h1>index.jsp</h1>
 	<h1>시작 페이지</h1>
-	<a href="b.jsp">브라우저 접근</a>
-	<a href="WEB-INF/views/a.jsp">여기도 접근 가능할까?</a>
+	<a href="a.do">여기도 접근 가능할까?</a>
+	<a href="memberList.do">멤버 목록</a>
+	<a href="memberSearch.do">멤버 조회</a>
+	<a href="memberLoginForm.do">멤버 로그인</a>
+	<a href="memberJoinForm.do">회원가입</a>
 </body>
 </html>
