@@ -42,5 +42,6 @@ public class FrontController extends HttpServlet {
 		if (viewPage != null && viewPage.endsWith(".do")) {
 			viewPage = "WEB-INF/views" + ".jsp";
 		}
+		
 	}
 }
