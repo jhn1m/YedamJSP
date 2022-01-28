@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.micol.prj.notice.service.NoticeMapper">
+
+	<resultMap type="co.micol.prj.notice.vo.NoticeVO" id="noticeMap">
+		<id property="noticeId" column="notice_id" />
+		<result property="noticeWriter" column="notice_writer" />
+		<result property="noticeTitle" column="notice_title" />
+		<result property="noticeSubject" column="notice_subject" />
+		<result property="noticeDate" column="notice_date" />
+		<result property="noticeHit" column="notice_hit" />
+	</resultMap>
+
+	<select id="noticeSelectList" resultType="co.micol.prj.notice.vo.NoticeVO">
+	SELECT 
+		NOTICE_ID AS noticeId,
+		NOTICE_WRITER AS noticeWriter,
+		NOTICE_TITLE AS noticeTitle,
+		NOTICE_SUBJECT AS noticeSubject,
+		NOTICE_DATE AS noticeDate,
+		NOTICE_HIT AS noticeHit
+	 FROM NOTICE
+	</select>
+	
+	<select id="noticeSelect" resultMap="noticeMap">
+	SELECT * FROM NOTICE WHERE NOTICE_ID = #{noticeId}
+	</select>
+	
+	<insert id="noticeInsert">
+	INSERT INTO NOTICE VALUES()
+	</insert>
+	
+	<delete id="noticeDelete">
+	DELETE FROM NOTICE WHERE
+	</delete>
+	
+	<update id="noticeUpdate">
+	UPDATE NOTICE SET
+	</update>
+	
+	<update id="noticeHitUpdate">
+	UPDATE NOTICE SET
+	</update>
+	
+	<select id="noticeSearch" resultMap="noticeMap"></select>
+
+	<!-- result type 사용불가. VO와 DB의 칼럼명이 일치하지 않으므로 -->
+	<select id="noticeSearch"></select>
+</mapper>
+
