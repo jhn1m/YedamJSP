@@ -5,6 +5,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
+
 public class MemberVO {
 	private String id;
 	private String password;
@@ -12,5 +13,5 @@ public class MemberVO {
 	private String tel;
 	private String address;
 	private String author;
-	
+
 }
