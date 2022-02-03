@@ -3,7 +3,6 @@ package co.micol.prj.command;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.HttpUtils;
 
 import co.micol.prj.comm.Command;
 import co.micol.prj.member.service.MemberService;
@@ -17,7 +16,7 @@ public class Login implements Command {
 		MemberService memberDao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		HttpSession session = request.getSession(); // 세션객체를 가져온다
-
+		
 		vo.setId(request.getParameter("id"));
 		vo.setPassword(request.getParameter("password"));
 

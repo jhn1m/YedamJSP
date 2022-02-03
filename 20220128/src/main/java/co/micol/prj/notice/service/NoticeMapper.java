@@ -18,7 +18,7 @@ public interface NoticeMapper {
 	int noticeUpdate(NoticeVO vo);
 
 	void noticeHitUpdate(int id); // 조회수 증가
-
+	
 	// 검색기능, 검색할 필드와 데이터를 전달받음
 	// 매퍼에선 전달인자가 2개 이상일때 @Param을 써야함
 	List<NoticeVO> noticeSearch(@Param("key") String key, @Param("str") String str);

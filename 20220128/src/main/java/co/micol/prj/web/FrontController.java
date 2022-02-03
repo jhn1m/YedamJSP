@@ -16,6 +16,10 @@ import co.micol.prj.command.Login;
 import co.micol.prj.command.LoginForm;
 import co.micol.prj.command.Logout;
 import co.micol.prj.command.MainCommand;
+import co.micol.prj.command.NoticeList;
+import co.micol.prj.command.NoticeSelect;
+import co.micol.prj.command.NoticeWrite;
+import co.micol.prj.command.NoticeWriteForm;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -32,6 +36,10 @@ public class FrontController extends HttpServlet {
 		map.put("/loginForm.do", new LoginForm()); // login form
 		map.put("/login.do", new Login()); // login
 		map.put("/logout.do", new Logout()); // logout
+		map.put("/noticeList.do", new NoticeList()); // 공지사항 리스트
+		map.put("/noticeSelect.do", new NoticeSelect()); // 공지사항 세부 내용 보기
+		map.put("/noticeWriteForm.do", new NoticeWriteForm()); // 글쓰기 폼
+		map.put("/noticeWrite.do", new NoticeWrite());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
